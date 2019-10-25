@@ -1,0 +1,213 @@
+// Colors
+$black: rgb(30,30,30);
+$dkgray: rgb(60,60,60);
+$ltgray: rgb(175,175,175);
+$xltgray: rgb(244, 244, 245);
+$coral: rgb(255,73,96);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(244, 244, 245);
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#item-card {
+  background-color: #fff;
+  margin: 1.25rem;
+  padding: 1.25rem 2rem;
+  max-width: 400px;
+
+  .breadcrumbs {
+    display: flex;
+    color: $ltgray;
+    letter-spacing: .075rem;
+
+    .arrow {
+      font-size: .7rem;
+    }
+
+    .current {
+      color: $dkgray;
+    }
+  }
+
+  h1 {
+    color: $black;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 400;
+    padding-right: .25rem;
+
+    &:not(:first-child) {
+      padding: 0 .25rem;
+    }
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $coral;
+
+    del {
+      color: $ltgray;
+    }
+  }
+
+  .label {
+    font-size: .8rem;
+    font-weight: 400;
+    color: $dkgray;
+  }
+
+  .uline {
+      text-decoration: underline;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  .item-colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-gap: .5rem;
+
+    .item-image {
+      background-color: $xltgray;
+      padding: .5rem;
+      border-bottom: 2px solid $xltgray;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .color-selection {
+      border-bottom: 2px solid $coral;
+    }
+    
+  }
+
+  .item-sizes {
+    margin: 2rem 0;
+
+    &-labels {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .size-guide {
+      position: absolute;
+      transform: translateX(-50%) translateY(-120%);
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid $dkgray;
+
+      tr:not(:last-child) {
+        border-bottom: 1px solid $ltgray;
+      }
+
+      thead tr:first-child {
+        border-bottom: 2px solid $dkgray;
+      }
+
+      td, th {
+        padding: .2rem .5rem;
+      }
+    }
+
+    button {
+      font-size: .9rem;
+      color: $dkgray;
+      margin-bottom: .5rem;
+      padding: .5rem 1.5rem;
+      border: 2px solid $xltgray;
+      border-radius: 4px;
+      background-color: transparent;
+
+      &:not(:last-child) {
+        margin-right: .4rem;
+      }
+
+      &:hover {
+        background-color: $xltgray;
+        color: $ltgray;
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .size-selection {
+      background-color: $coral;
+      border: 2px solid $coral;
+      color: #fff;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
+    background: #fff url('https://image.flaticon.com/icons/png/128/130/130907.png') no-repeat 96% 50%;
+    background-size: .65rem;
+    margin: 0 0 1.5rem 0;
+    border: 2px solid $xltgray;
+    border-radius: 4px;
+    padding: .5rem;
+    font-size: .9rem;
+    color: $dkgray;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .cart-btn {
+    font-size: .9rem;
+    font-weight: bold;
+    background-color: $coral;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 2rem;
+    padding: .75rem 1.5rem;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .item-desc {
+    line-height: 1.45rem;
+  }
+
+  .cart-message {
+    color: $dkgray;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .hide {
+    display: none;
+  } 
+}
